@@ -24,5 +24,11 @@ setTimeout(() => clearInterval(interval), 4000);
 clearTimeout(() => setTimeout(interval), 5000);
 ```
 
-**A função que construímos funciona de forma base, a **
+1. **A função que construímos funciona de forma base, a que primeiramente colocamos uma variável de base de tempo, (que é definido em milisegundos). Logo depois assim, definimos uma função de *arrow function*, na qual imprimirá ``"checking"`` no console em lista de repetição infinita...**
+
+2. **Logo depois, para que não entremos em repetição infinita e desgovernada no console, e assim geremos um erro de execução, criamos uma função de `setInterval()` para que assim, para cada mensagem do console, seja deferido um intervalo de 4 segundos!**
+
+3. **Para definirmos uma outra função, também usamos a função de `setTimeout()` para que seja chamada em callback para a função de `clearInterval()` assim que passar 4 segundos de execução...**
+
+4. **Além disso ainda colocamos que assim 5 segundos de execução, devemos liberar essa função de timeout, com uma função de `clearTimeout()`. E assim conseguimos criar um evento de timer, com 4 tipos de tempos diferentemente, atuando tanto em conjunto quanto separadamente.**
 ---
